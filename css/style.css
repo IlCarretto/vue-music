@@ -1,0 +1,51 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* SONG-DESC */
+.songs-list {
+    list-style-type: none;
+}
+
+.player {
+    font-size: 5rem;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Inputs */
+.inputs-group {
+    width: 500px;
+    min-height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 3px grey;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.inputs-group input {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+#print-btn {
+   margin: 1rem 0; 
+   padding: .5rem;
+}
+
+

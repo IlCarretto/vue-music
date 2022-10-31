@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue music player</title>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS Framework -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div id="app">
+        <ul class="songs-list">
+            <li v-for="(song, index) in myPlaylist">
+                <div @click="song.player = !song.player" class="song-desc">
+                    <h4>{{song.name}}</h4>
+                    <h3>{{song.singer}}</h3>
+                    <span>{{song.genre}}</span> 
+                    <br>
+                    <span>{{song.length}}</span>
+                </div>
+                <div :class="song.player === true? 'show' : ''" class="player"><i class="fa-regular fa-circle-play"></i></div>
+            </li>
+        </ul>
+        <div class="inputs-group">
+            <h2>Inserisci le informazioni sulla canzone</h2>
+            <input v-model.trim="newSong.name" placeholder="Inserisci il nome del brano" type="text" id="animalName">
+            <input v-model.trim="newSong.singer" placeholder="Inserisci il cantante del brano" type="text" id="animalFamily">
+            <input v-model.trim="newSong.genre" placeholder="Inserisci il genere del brano" type="text" id="animalClass">
+            <input v-model.trim="newSong.length" placeholder="Inserisci la lunghezza del brano" type="text" id="animalClass">
+            <button @click="addNewSong" id="print-btn">Aggiungi alla lista e stampa!</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
