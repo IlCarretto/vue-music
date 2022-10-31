@@ -14,6 +14,10 @@ img {
     list-style-type: none;
 }
 
+.songs-list li {
+    margin-top: 1rem;
+}
+
 .player {
     font-size: 5rem;
     display: none;

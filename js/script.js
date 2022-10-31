@@ -24,28 +24,28 @@ createApp({
                     name: "deja-vu",
                     singer: "Olivia Rodrigo",
                     genre: "Pop",
-                    length: "3:36",
+                    songLength: "3:36",
                     player: false
                 },
                 {
                     name: "Fine Line",
                     singer: "Harry Styles",
                     genre: "Pop",
-                    length: "6:18",
+                    songLength: "6:18",
                     player: false
                 },
                 {
                     name: "Greedy",
                     singer: "Ariana Grande",
                     genre: "Pop",
-                    length: "3:35",
+                    songLength: "3:35",
                     player: false
                 },
                 {
                     name: "Venus Fly Trap",
                     singer: "MARINA",
                     genre: "Pop",
-                    length: "2:39",
+                    songLength: "2:39",
                     player: false
                 }
             ],
@@ -53,16 +53,16 @@ createApp({
                 name: "",
                 singer: "",
                 genre: "",
-                length: null,
+                songLength: null,
                 player: false
             }
         }
     },
     methods: {
         addNewSong() {
-            this.myPlaylist.push(this.newSong);
-        }
-    },
-    created() {
+            if (this.newSong.name.length >= 3 && this.newSong.singer.length >= 3 && this.newSong.genre.length >= 3 && this.newSong.songLength.includes(":")) {
+                this.myPlaylist.push(this.newSong);
+            }
+        } 
     }
 }).mount("#app");

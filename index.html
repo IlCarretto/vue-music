@@ -20,19 +20,19 @@
                 <div @click="song.player = !song.player" class="song-desc">
                     <h4>{{song.name}}</h4>
                     <h3>{{song.singer}}</h3>
-                    <span>{{song.genre}}</span> 
+                    <span>Genre: {{song.genre}}</span> 
                     <br>
-                    <span>{{song.length}}</span>
+                    <span>Length: {{song.songLength}}</span>
                 </div>
                 <div :class="song.player === true? 'show' : ''" class="player"><i class="fa-regular fa-circle-play"></i></div>
             </li>
         </ul>
         <div class="inputs-group">
             <h2>Inserisci le informazioni sulla canzone</h2>
-            <input v-model.trim="newSong.name" placeholder="Inserisci il nome del brano" type="text" id="animalName">
-            <input v-model.trim="newSong.singer" placeholder="Inserisci il cantante del brano" type="text" id="animalFamily">
-            <input v-model.trim="newSong.genre" placeholder="Inserisci il genere del brano" type="text" id="animalClass">
-            <input v-model.trim="newSong.length" placeholder="Inserisci la lunghezza del brano" type="text" id="animalClass">
+            <input v-model.trim="newSong.name" placeholder="Inserisci il nome del brano" type="text" id="songName">
+            <input v-model.trim="newSong.singer" placeholder="Inserisci il cantante del brano" type="text" id="songSinger">
+            <input v-model.trim="newSong.genre" placeholder="Inserisci il genere del brano" type="text" id="songGenre">
+            <input v-model.trim="newSong.songLength" placeholder="Inserisci la lunghezza del brano" type="text" id="songLength">
             <button @click="addNewSong" id="print-btn">Aggiungi alla lista e stampa!</button>
         </div>
     </div>
